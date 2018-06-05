@@ -46,6 +46,9 @@
                       if (!value || (typeof value !== 'object')) {
                           return;
                       }
+                     // value是：{test: "I am test."}  
+                     // key是：test
+                     // value[key]是：I am test.  
                       Object.keys(value).forEach(function(key) {
                           defineReactive(value, key, value[key]);
                       });
